@@ -7,15 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01554F8FCF6ADD25D6696953 /* Pods_Digiturk_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D432F5FD179CD68935DA8762 /* Pods_Digiturk_iOS.framework */; };
 		4EB99E592AF2ECC00019D02B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB99E582AF2ECC00019D02B /* AppDelegate.swift */; };
 		4EB99E5B2AF2ECC00019D02B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB99E5A2AF2ECC00019D02B /* SceneDelegate.swift */; };
 		4EB99E5D2AF2ECC00019D02B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB99E5C2AF2ECC00019D02B /* ViewController.swift */; };
 		4EB99E602AF2ECC00019D02B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB99E5E2AF2ECC00019D02B /* Main.storyboard */; };
 		4EB99E622AF2ECC10019D02B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EB99E612AF2ECC10019D02B /* Assets.xcassets */; };
 		4EB99E652AF2ECC10019D02B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB99E632AF2ECC10019D02B /* LaunchScreen.storyboard */; };
+		4EB99E6F2AF2EDE00019D02B /* Extension+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB99E6E2AF2EDE00019D02B /* Extension+Collection.swift */; };
+		4EB99E732AF2F1140019D02B /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB99E722AF2F1140019D02B /* Loader.swift */; };
+		4EB99E772AF2F21B0019D02B /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB99E762AF2F21B0019D02B /* Service.swift */; };
+		4EB99E792AF2F22D0019D02B /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB99E782AF2F22D0019D02B /* ApiCaller.swift */; };
+		4EB99E7B2AF2F2390019D02B /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB99E7A2AF2F2390019D02B /* ServiceManager.swift */; };
+		4EB99E7F2AF2F37F0019D02B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB99E7E2AF2F37F0019D02B /* HomeViewController.swift */; };
+		4EB99E822AF2F39A0019D02B /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB99E812AF2F39A0019D02B /* HomePresenter.swift */; };
+		4EB99E842AF2F3A30019D02B /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB99E832AF2F3A30019D02B /* HomeInteractor.swift */; };
+		4EB99E872AF2F3C60019D02B /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB99E862AF2F3C60019D02B /* HomeRouter.swift */; };
+		4EB99E8A2AF2F3D80019D02B /* HomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB99E892AF2F3D80019D02B /* HomeWorker.swift */; };
+		4EB99E8D2AF2F3FB0019D02B /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB99E8C2AF2F3FB0019D02B /* HomeModels.swift */; };
+		4EB99E912AF2F7510019D02B /* MovieGenre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB99E902AF2F7510019D02B /* MovieGenre.swift */; };
+		4EB99E942AF2F7710019D02B /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB99E932AF2F7710019D02B /* Movie.swift */; };
+		4EB99E972AF325EB0019D02B /* SwipeableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB99E962AF325EB0019D02B /* SwipeableHeaderView.swift */; };
+		4EB99E9A2AF3B7D30019D02B /* GenreCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB99E992AF3B7D30019D02B /* GenreCollectionCell.swift */; };
+		4EB99E9C2AF451EB0019D02B /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB99E9B2AF451EB0019D02B /* HeaderView.swift */; };
+		4EB99E9E2AF463730019D02B /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB99E9D2AF463730019D02B /* Extension+UIView.swift */; };
+		4EB99EA12AF48D760019D02B /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB99EA02AF48D760019D02B /* MovieCollectionViewCell.swift */; };
+		4EB99EA42AF57BC90019D02B /* PageControllerCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB99EA32AF57BC90019D02B /* PageControllerCollectionCell.swift */; };
+		4EB99EA72AF57D470019D02B /* SwipeableHeaderCellList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB99EA62AF57D470019D02B /* SwipeableHeaderCellList.swift */; };
+		4EB99EAC2AF5A50A0019D02B /* GenreTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB99EAB2AF5A50A0019D02B /* GenreTableCell.swift */; };
+		4EB99EAE2AF5A77F0019D02B /* GenreCellHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB99EAD2AF5A77F0019D02B /* GenreCellHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		296B3D129FA7C15590AF9290 /* Pods-Digiturk_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digiturk_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Digiturk_iOS/Pods-Digiturk_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		4EB99E552AF2ECC00019D02B /* Digiturk_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Digiturk_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB99E582AF2ECC00019D02B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EB99E5A2AF2ECC00019D02B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +48,30 @@
 		4EB99E612AF2ECC10019D02B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EB99E642AF2ECC10019D02B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EB99E662AF2ECC10019D02B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EB99E6E2AF2EDE00019D02B /* Extension+Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Collection.swift"; sourceTree = "<group>"; };
+		4EB99E722AF2F1140019D02B /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		4EB99E762AF2F21B0019D02B /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		4EB99E782AF2F22D0019D02B /* ApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCaller.swift; sourceTree = "<group>"; };
+		4EB99E7A2AF2F2390019D02B /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		4EB99E7E2AF2F37F0019D02B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4EB99E812AF2F39A0019D02B /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		4EB99E832AF2F3A30019D02B /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		4EB99E862AF2F3C60019D02B /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		4EB99E892AF2F3D80019D02B /* HomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorker.swift; sourceTree = "<group>"; };
+		4EB99E8C2AF2F3FB0019D02B /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
+		4EB99E902AF2F7510019D02B /* MovieGenre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGenre.swift; sourceTree = "<group>"; };
+		4EB99E932AF2F7710019D02B /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		4EB99E962AF325EB0019D02B /* SwipeableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableHeaderView.swift; sourceTree = "<group>"; };
+		4EB99E992AF3B7D30019D02B /* GenreCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCollectionCell.swift; sourceTree = "<group>"; };
+		4EB99E9B2AF451EB0019D02B /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		4EB99E9D2AF463730019D02B /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
+		4EB99EA02AF48D760019D02B /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		4EB99EA32AF57BC90019D02B /* PageControllerCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControllerCollectionCell.swift; sourceTree = "<group>"; };
+		4EB99EA62AF57D470019D02B /* SwipeableHeaderCellList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableHeaderCellList.swift; sourceTree = "<group>"; };
+		4EB99EAB2AF5A50A0019D02B /* GenreTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreTableCell.swift; sourceTree = "<group>"; };
+		4EB99EAD2AF5A77F0019D02B /* GenreCellHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCellHeaderView.swift; sourceTree = "<group>"; };
+		541F9DED158BA053C01FC658 /* Pods-Digiturk_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digiturk_iOS.release.xcconfig"; path = "Target Support Files/Pods-Digiturk_iOS/Pods-Digiturk_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		D432F5FD179CD68935DA8762 /* Pods_Digiturk_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digiturk_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01554F8FCF6ADD25D6696953 /* Pods_Digiturk_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +91,8 @@
 			children = (
 				4EB99E572AF2ECC00019D02B /* Digiturk_iOS */,
 				4EB99E562AF2ECC00019D02B /* Products */,
+				7EFA2E2EB8D1032D105DE7CB /* Pods */,
+				DEA25DF40689E8A9B5AF466D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,8 +107,10 @@
 		4EB99E572AF2ECC00019D02B /* Digiturk_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				4EB99E582AF2ECC00019D02B /* AppDelegate.swift */,
-				4EB99E5A2AF2ECC00019D02B /* SceneDelegate.swift */,
+				4EB99E6C2AF2ED520019D02B /* AppManager */,
+				4EB99E7C2AF2F34A0019D02B /* Scenes */,
+				4EB99E6D2AF2ED700019D02B /* Common */,
+				4EB99E712AF2F1050019D02B /* Base */,
 				4EB99E5C2AF2ECC00019D02B /* ViewController.swift */,
 				4EB99E5E2AF2ECC00019D02B /* Main.storyboard */,
 				4EB99E612AF2ECC10019D02B /* Assets.xcassets */,
@@ -67,6 +120,187 @@
 			path = Digiturk_iOS;
 			sourceTree = "<group>";
 		};
+		4EB99E6C2AF2ED520019D02B /* AppManager */ = {
+			isa = PBXGroup;
+			children = (
+				4EB99E582AF2ECC00019D02B /* AppDelegate.swift */,
+				4EB99E5A2AF2ECC00019D02B /* SceneDelegate.swift */,
+			);
+			path = AppManager;
+			sourceTree = "<group>";
+		};
+		4EB99E6D2AF2ED700019D02B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4EB99EA82AF57E660019D02B /* UI */,
+				4EB99E702AF2EEF80019D02B /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4EB99E702AF2EEF80019D02B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4EB99E6E2AF2EDE00019D02B /* Extension+Collection.swift */,
+				4EB99E9D2AF463730019D02B /* Extension+UIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4EB99E712AF2F1050019D02B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				4EB99E752AF2F15C0019D02B /* Network */,
+				4EB99E742AF2F1510019D02B /* Helper */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		4EB99E742AF2F1510019D02B /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				4EB99E722AF2F1140019D02B /* Loader.swift */,
+				4EB99E9B2AF451EB0019D02B /* HeaderView.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		4EB99E752AF2F15C0019D02B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4EB99E8F2AF2F73A0019D02B /* Response */,
+				4EB99E762AF2F21B0019D02B /* Service.swift */,
+				4EB99E782AF2F22D0019D02B /* ApiCaller.swift */,
+				4EB99E7A2AF2F2390019D02B /* ServiceManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		4EB99E7C2AF2F34A0019D02B /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				4EB99E7D2AF2F3680019D02B /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		4EB99E7D2AF2F3680019D02B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4EB99E7E2AF2F37F0019D02B /* HomeViewController.swift */,
+				4EB99E812AF2F39A0019D02B /* HomePresenter.swift */,
+				4EB99E832AF2F3A30019D02B /* HomeInteractor.swift */,
+				4EB99E862AF2F3C60019D02B /* HomeRouter.swift */,
+				4EB99E892AF2F3D80019D02B /* HomeWorker.swift */,
+				4EB99E8C2AF2F3FB0019D02B /* HomeModels.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		4EB99E8F2AF2F73A0019D02B /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				4EB99E922AF2F75F0019D02B /* Entity */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		4EB99E922AF2F75F0019D02B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				4EB99E902AF2F7510019D02B /* MovieGenre.swift */,
+				4EB99E932AF2F7710019D02B /* Movie.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		4EB99E952AF325D60019D02B /* GenreCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				4EB99E992AF3B7D30019D02B /* GenreCollectionCell.swift */,
+			);
+			path = GenreCollectionCell;
+			sourceTree = "<group>";
+		};
+		4EB99E982AF3B7AF0019D02B /* TableHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				4EB99E962AF325EB0019D02B /* SwipeableHeaderView.swift */,
+			);
+			path = TableHeaderView;
+			sourceTree = "<group>";
+		};
+		4EB99E9F2AF48D630019D02B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4EB99EAA2AF5A4F50019D02B /* GenreTableCell */,
+				4EB99EA92AF57E930019D02B /* MovieCollectionCell */,
+				4EB99EA22AF57B8D0019D02B /* PageControllerCollectionCell */,
+				4EB99E952AF325D60019D02B /* GenreCollectionCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4EB99EA22AF57B8D0019D02B /* PageControllerCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				4EB99EA32AF57BC90019D02B /* PageControllerCollectionCell.swift */,
+			);
+			path = PageControllerCollectionCell;
+			sourceTree = "<group>";
+		};
+		4EB99EA52AF57D390019D02B /* CellList */ = {
+			isa = PBXGroup;
+			children = (
+				4EB99EA62AF57D470019D02B /* SwipeableHeaderCellList.swift */,
+			);
+			path = CellList;
+			sourceTree = "<group>";
+		};
+		4EB99EA82AF57E660019D02B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4EB99E982AF3B7AF0019D02B /* TableHeaderView */,
+				4EB99E9F2AF48D630019D02B /* Cell */,
+				4EB99EA52AF57D390019D02B /* CellList */,
+				4EB99EAD2AF5A77F0019D02B /* GenreCellHeaderView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		4EB99EA92AF57E930019D02B /* MovieCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				4EB99EA02AF48D760019D02B /* MovieCollectionViewCell.swift */,
+			);
+			path = MovieCollectionCell;
+			sourceTree = "<group>";
+		};
+		4EB99EAA2AF5A4F50019D02B /* GenreTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				4EB99EAB2AF5A50A0019D02B /* GenreTableCell.swift */,
+			);
+			path = GenreTableCell;
+			sourceTree = "<group>";
+		};
+		7EFA2E2EB8D1032D105DE7CB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				296B3D129FA7C15590AF9290 /* Pods-Digiturk_iOS.debug.xcconfig */,
+				541F9DED158BA053C01FC658 /* Pods-Digiturk_iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DEA25DF40689E8A9B5AF466D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D432F5FD179CD68935DA8762 /* Pods_Digiturk_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +308,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4EB99E692AF2ECC10019D02B /* Build configuration list for PBXNativeTarget "Digiturk_iOS" */;
 			buildPhases = (
+				6001C69EF022FEA91530E93E /* [CP] Check Pods Manifest.lock */,
 				4EB99E512AF2ECC00019D02B /* Sources */,
 				4EB99E522AF2ECC00019D02B /* Frameworks */,
 				4EB99E532AF2ECC00019D02B /* Resources */,
+				36EE2EBC9017817FB1B34A64 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +369,78 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		36EE2EBC9017817FB1B34A64 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Digiturk_iOS/Pods-Digiturk_iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Digiturk_iOS/Pods-Digiturk_iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Digiturk_iOS/Pods-Digiturk_iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6001C69EF022FEA91530E93E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Digiturk_iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4EB99E512AF2ECC00019D02B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4EB99E5D2AF2ECC00019D02B /* ViewController.swift in Sources */,
+				4EB99E872AF2F3C60019D02B /* HomeRouter.swift in Sources */,
+				4EB99EA42AF57BC90019D02B /* PageControllerCollectionCell.swift in Sources */,
+				4EB99E9E2AF463730019D02B /* Extension+UIView.swift in Sources */,
+				4EB99E842AF2F3A30019D02B /* HomeInteractor.swift in Sources */,
+				4EB99EA72AF57D470019D02B /* SwipeableHeaderCellList.swift in Sources */,
+				4EB99E6F2AF2EDE00019D02B /* Extension+Collection.swift in Sources */,
+				4EB99E792AF2F22D0019D02B /* ApiCaller.swift in Sources */,
+				4EB99E9A2AF3B7D30019D02B /* GenreCollectionCell.swift in Sources */,
+				4EB99E9C2AF451EB0019D02B /* HeaderView.swift in Sources */,
+				4EB99E822AF2F39A0019D02B /* HomePresenter.swift in Sources */,
+				4EB99E942AF2F7710019D02B /* Movie.swift in Sources */,
+				4EB99EAE2AF5A77F0019D02B /* GenreCellHeaderView.swift in Sources */,
+				4EB99E8D2AF2F3FB0019D02B /* HomeModels.swift in Sources */,
+				4EB99E7B2AF2F2390019D02B /* ServiceManager.swift in Sources */,
 				4EB99E592AF2ECC00019D02B /* AppDelegate.swift in Sources */,
+				4EB99E972AF325EB0019D02B /* SwipeableHeaderView.swift in Sources */,
+				4EB99EAC2AF5A50A0019D02B /* GenreTableCell.swift in Sources */,
+				4EB99E7F2AF2F37F0019D02B /* HomeViewController.swift in Sources */,
+				4EB99E8A2AF2F3D80019D02B /* HomeWorker.swift in Sources */,
+				4EB99E912AF2F7510019D02B /* MovieGenre.swift in Sources */,
 				4EB99E5B2AF2ECC00019D02B /* SceneDelegate.swift in Sources */,
+				4EB99EA12AF48D760019D02B /* MovieCollectionViewCell.swift in Sources */,
+				4EB99E732AF2F1140019D02B /* Loader.swift in Sources */,
+				4EB99E772AF2F21B0019D02B /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +516,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +570,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -282,6 +582,7 @@
 		};
 		4EB99E6A2AF2ECC10019D02B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 296B3D129FA7C15590AF9290 /* Pods-Digiturk_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -295,6 +596,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,6 +612,7 @@
 		};
 		4EB99E6B2AF2ECC10019D02B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 541F9DED158BA053C01FC658 /* Pods-Digiturk_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -323,6 +626,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
