@@ -40,6 +40,7 @@ run ederek hatayı çözebilirsiniz.
   - Başlangıçta view'ın arka planı şeffaftır. TabelView scroll.Y değeri (70) ve (180 aralığında arkaplan rengi transparence özelliği 0.5 deperinde siyah olarak belirlenir. Eğer scroll.Y 180 değerinden büyük ise arkaplan rengi siyah olarak belirlenmiştir.
 
 <h2>Genre Detail</h2>
+<img src="https://user-images.githubusercontent.com/60100510/222154620-fd13c06a-86ac-4bd4-8167-2b9b0d9d9c72.png" alt="Swagger" width="200" height="400"/>     
  <img src="https://github.com/nbaciyarkin/Digit-rkBeinConnect/assets/60100510/64b1628d-a601-40ea-bab9-0dbf057cfad3.png" alt="Swagger" width="200" height="400"/>
 
  <h2>Custom Video Player</h2>
