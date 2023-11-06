@@ -43,7 +43,7 @@ run ederek hatayı çözebilirsiniz.
 <h2>Custom Video Player</h2>
 <img src="https://github.com/nbaciyarkin/Digit-rkBeinConnect/assets/60100510/0faaf428-3c62-4330-9282-943eb338cc7a.png" alt="Swagger" width="200" height="400"/>
 
-<img src="https://github.com/nbaciyarkin/Digit-rkBeinConnect/assets/60100510/7cbdcb93-a16d-4746-9d79-cf7e93502bf4.png" alt="Swagger" width="200" height="400"/>
+<img src="https://github.com/nbaciyarkin/Digit-rkBeinConnect/assets/60100510/f5856c18-63dd-41d9-b5f2-3beb706487d2.png" alt="Swagger" width="200" height="400"/>
 
  -<h2>Package Management</h2> 
   - CocoaPods
