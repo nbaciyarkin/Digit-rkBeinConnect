@@ -22,6 +22,8 @@ run ederek hatayı çözebilirsiniz.
 
   Uygulamayı  Ayağa kaldırın ->  Digiturk.xcworkspace 
  -
+ Uygulama private olarak ekran kaydıyla YouTube'a eklenmiştir.
+ https://youtu.be/wHe3ByK8VqE
 
  # BeinConnect - SCENES
 
@@ -39,11 +41,9 @@ run ederek hatayı çözebilirsiniz.
  <img src="https://github.com/nbaciyarkin/Digit-rkBeinConnect/assets/60100510/64b1628d-a601-40ea-bab9-0dbf057cfad3.png" alt="Swagger" width="200" height="400"/>
 
  <h2>Custom Video Player</h2>
- 
- <h3>Full Screen</h3>
+
  <img src="https://github.com/nbaciyarkin/Digit-rkBeinConnect/assets/60100510/a25c4073-6b5f-4258-8919-169affbb9694.png" alt="Swagger" width="200" height="400"/
 
- <h3>Min Screen</h3>
  <img src="https://github.com/nbaciyarkin/Digit-rkBeinConnect/assets/60100510/7cbdcb93-a16d-4746-9d79-cf7e93502bf4.png" alt="Swagger" width="200" height="400"/>
 
  -<h2>Package Management</h2> 
