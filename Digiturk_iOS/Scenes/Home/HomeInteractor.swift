@@ -10,61 +10,51 @@ import UIKit
 
 protocol HomeBusinessLogic {
     func viewDidLoad()
-    //func getMoviesWithGenre(genreId: String)
+    func getMoviesWithGenre(genreId: String, indexPath: IndexPath)
 }
 
 protocol HomeDataStore {
     var genres: [MovieGenre] { get set }
     var trendMovies: MovieList? { get set }
-    var moviesWithGenre: MovieList? { get set }
 }
 
 class HomeInteractor: HomeBusinessLogic, HomeDataStore {
     var presenter: HomePresentationLogic?
     private lazy var worker: HomeWorker = HomeWorker()
-    
     var genres: [MovieGenre] = []
     var trendMovies: MovieList?
-    var moviesWithGenre: MovieList?
-    
-    
     func viewDidLoad() {
         if !self.genres.isEmpty {
             self.presenter?.presentViewDidLoad(response: Home.View.Response(genres: self.genres, error: nil))
         } else {
             self.getGenreList()
         }
-        guard let movies = trendMovies else {
+        guard trendMovies != nil else {
             return getMovies()
         }
     }
-    
     private func getMovies(){
         self.worker.getTrendMovies {[weak self] response in
             switch response {
             case .failure(let error):
                 print(error)
-                //self?.presenter?.presentViewDidLoad(response: Home.View.Response(genres: [], error: error.localizedDescription))
             case .success(let response):
                 let response = MovieList.View.Response(movieList: response.results , error: nil)
                 self?.presenter?.presentTrendMovies(response: response)
             }
         }
     }
-    
-//     func getMoviesWithGenre(genreId: String){
-//        self.worker.getMoviesWithGenre(genreId: genreId) {[weak self] response in
-//            switch response {
-//            case .failure(let error):
-//                print(error)
-//                //self?.presenter?.presentViewDidLoad(response: Home.View.Response(genres: [], error: error.localizedDescription))
-//            case .success(let response):
-//                let response = MovieList.View.Response(movieList: response.results , error: nil)
-//                self?.presenter?.presentMoviesWithGenre(response: response)
-//            }
-//        }
-//    }
-    
+    func getMoviesWithGenre(genreId: String, indexPath: IndexPath){
+        self.worker.getMoviesWithGenre(genreId: genreId) {[weak self] response in
+            switch response {
+            case .failure(let error):
+                print(error)
+            case .success(let response):
+                let response = MovieList.View.Response(movieList: response.results , error: nil)
+                self?.presenter?.presentMoviesWithGenre(response: response, indexPath: indexPath)
+            }
+        }
+    }
     private func getGenreList() {
         self.worker.getGenres { [weak self] result in
             switch result {

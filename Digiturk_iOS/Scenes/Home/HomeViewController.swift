@@ -13,10 +13,9 @@ import SnapKit
 protocol HomeDisplayLogic: AnyObject {
     func displayViewDidLoad(viewModel: Home.View.ViewModel)
     func displayTrendMovies(viewModel: MovieList.View.ViewModel)
-    func displayMoviesWithGenre(viewModel: MovieList.View.ViewModel)
+    func displayMoviesWithGenre(viewModel: MovieList.View.ViewModel, indexPath: IndexPath)
 }
-
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
     private lazy var tableView = UITableView()
     private var tableHeaderView: SwipeableHeaderView?
     let controllerHeaderView = HeaderView()
@@ -38,30 +37,24 @@ class HomeViewController: UIViewController {
         presenter.viewController = viewController
         router.viewController = viewController
         router.dataStore = interactor
-        
     }
     // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setTableView()
-        view.backgroundColor = .black
         setup()
         self.interactor?.viewDidLoad()
-        navigationController?.setNavigationBarHidden(true, animated: false)
         setUI()
         tableView.contentInset = UIEdgeInsets(top: -UIApplication.shared.statusBarFrame.height, left: 0, bottom: 0, right: 0)
-        if #available(iOS 13.0, *) {
-            overrideUserInterfaceStyle = .dark
-        }
+        
     }
-    
     func setTableView(){
         view.addSubview(tableView)
         tableView.backgroundColor = .clear
         tableView.dataSource = self
         tableView.delegate = self
-    
+        tableView.register(GenreTableCell.self, forCellReuseIdentifier: GenreTableCell.identifier)
+        
         tableView.snp.makeConstraints { make in
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
@@ -75,7 +68,7 @@ class HomeViewController: UIViewController {
         } else {
             automaticallyAdjustsScrollViewInsets = false
         }
-        tableHeaderView = SwipeableHeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height:430))
+        tableHeaderView = UtilityHelper.shared.isPad() ? SwipeableHeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height:400)) : SwipeableHeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height:350))
         tableView.tableHeaderView = tableHeaderView
     }
     private func setUI(){
@@ -84,55 +77,30 @@ class HomeViewController: UIViewController {
             make.centerX.equalToSuperview()
             make.width.equalToSuperview()
             make.top.equalToSuperview()
-            make.height.equalTo(140)
+            make.height.equalTo(120)
         }
     }
- 
 }
 extension HomeViewController: HomeDisplayLogic {
-    func displayMoviesWithGenre(viewModel: MovieList.View.ViewModel) {
-       // print(viewModel.movieList)
+    func displayMoviesWithGenre(viewModel: MovieList.View.ViewModel, indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: IndexPath(row: indexPath.row, section: indexPath.section))  as? GenreTableCell {
+            cell.movieList = viewModel.movieList
+        }
     }
-    
     func displayTrendMovies(viewModel: MovieList.View.ViewModel) {
-        print("movieler geldi")
         self.trendMovies = viewModel.movieList
-        print(viewModel.movieList)
         tableHeaderView?.setMovies(movieList: self.trendMovies)
-        reloadTable()
     }
-    
     func displayViewDidLoad(viewModel: Home.View.ViewModel) {
         Loader.show()
         self.genreList = viewModel.genres
-        print(viewModel.genres)
         reloadTable()
         Loader.hide()
     }
-    
-    //  func displayViewDidLoad(viewModel: Home.View.ViewModel) {
-    //    if let error = viewModel.error {
-    ////      self.showAlert(title: "Uyarı", message: error, firstButtonTitle: "Tamam")
-    //    }
-    //    self.genreList = viewModel.genres
-    //    self.genreList[0].isSelected = true
-    //    //self.genresCollectionView.reloadData()
-    //    self.viewControllers = self.genreList.map({ genre in
-    //      let destination = MovieListViewController()
-    //      var datastore = destination.router?.dataStore
-    //      datastore?.genreId = genre.id
-    //      return destination
-    //  }
-    //    self.reloadData()
-    
     private func setupGenreListData(itemIndex: Int) {
         for index in self.genreList.indices {
             self.genreList[index].isSelected = false
         }
-        self.genreList[itemIndex].isSelected = true
-        //    self.genresCollectionView.reloadData()
-        //    self.genresCollectionView.scrollToItem(at: IndexPath(row: itemIndex, section: 0), at: .centeredHorizontally, animated: true)
-        
     }
 }
 extension HomeViewController: UITableViewDataSource {
@@ -142,57 +110,47 @@ extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         1
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.backgroundColor = .white
-        if let genreId = genreList[indexPath.section].id {
-            print("GENRE ID : = \(genreId)")
-           
-            
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: GenreTableCell.identifier, for: indexPath) as? GenreTableCell else {
+            return UITableViewCell()
         }
-          
+        if let genreId = genreList.get(at: indexPath.section)?.id {
+            self.interactor?.getMoviesWithGenre(genreId: String(genreId), indexPath: indexPath)
+        }
         return cell
-        
-        
     }
-    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-            let contentOffsetY = scrollView.contentOffset.y
-
-            // Set your desired conditions for changing the navigation bar color based on content offset
-        print(contentOffsetY)
-         if contentOffsetY < 0 {
+        let contentOffsetY = scrollView.contentOffset.y
+        if contentOffsetY < 0 {
             scrollView.contentOffset.y = 0
         }
-            if contentOffsetY > 100 { // Adjust this value as needed
-                controllerHeaderView.backgroundColor = .black
-            } else if contentOffsetY < 100 {
-                
-                controllerHeaderView.backgroundColor = .clear
-            }
+        if contentOffsetY < 70 { // Adjust this value as needed
+            controllerHeaderView.backgroundColor = .clear
+        }else if contentOffsetY > 70 && contentOffsetY < 180 {
+            controllerHeaderView.backgroundColor = Colors.black.withAlphaComponent(0.6)
+        } else if contentOffsetY > 180 {
+            controllerHeaderView.backgroundColor = Colors.black
         }
+    }
 }
-
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view =  GenreCellHeaderView()
-        if let sectionTitle = genreList[section].name {
-            view.setSectionTitle(sectionTitle: sectionTitle)
+        if let genre = genreList.get(at: section){
+            view.delegate = self
+            view.backgroundColor = Colors.black
+            view.setSection(genre: genre)
+            return view
         }
-        view.backgroundColor = .black
-        
-        return view
+        return UIView()
     }
-    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 33
+        return 35
     }
-    
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 180
+    }
 }
-
-
 extension HomeViewController {
     func reloadTable(){
         DispatchQueue.main.async {
@@ -200,14 +158,19 @@ extension HomeViewController {
         }
     }
 }
-
 extension HomeViewController {
     func setBackGround(){
-        let startColor = UIColor.black.withAlphaComponent(0.8)
-        let endColor = UIColor.black
+        let startColor = Colors.black.withAlphaComponent(0.8)
+        let endColor = Colors.black
         self.view.applyGradient(colors: [startColor.cgColor, endColor.cgColor], startPoint: CGPoint(x: 0, y: 0), endPoint: CGPoint(x: 0, y: 0.2))
     }
 }
+extension HomeViewController: GenreCellHeaderViewDelegate {
+    func didTappedGenreHeaderView(genre: MovieGenre) {
+        self.router?.navigate(genre: genre)
+    }
+}
+
 
 
 

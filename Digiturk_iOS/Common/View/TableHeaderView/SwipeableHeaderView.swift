@@ -16,12 +16,12 @@ class SwipeableHeaderView: UIView {
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
         layout.sectionInset = UIEdgeInsets.zero
-            layout.headerReferenceSize = CGSize.zero
-            layout.footerReferenceSize = CGSize.zero
-            layout.sectionHeadersPinToVisibleBounds = true
-            layout.sectionFootersPinToVisibleBounds = true
-            layout.scrollDirection = .horizontal
-            layout.minimumLineSpacing = 0
+        layout.headerReferenceSize = CGSize.zero
+        layout.footerReferenceSize = CGSize.zero
+        layout.sectionHeadersPinToVisibleBounds = true
+        layout.sectionFootersPinToVisibleBounds = true
+        layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = 0
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.register(MovieCollectionViewCell.self, forCellWithReuseIdentifier: MovieCollectionViewCell.identifier)
@@ -32,7 +32,6 @@ class SwipeableHeaderView: UIView {
         collectionView.isPagingEnabled = true
         return collectionView
     }()
-    
     private lazy var PageControllerCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -49,11 +48,13 @@ class SwipeableHeaderView: UIView {
         collectionView.isScrollEnabled = false
         return collectionView
     }()
+    private var containerView: UIView = {
+        let view = UIView()
+        return view
+    }()
     
     private(set)var trendMoviesList: [Movie] = []
-    private(set)var sectionList = [SwipeableHeaderSectionItem]()
     private(set)var currentPosterIndex = 0
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUI()
@@ -75,8 +76,27 @@ class SwipeableHeaderView: UIView {
             make.height.equalTo(20)
             make.bottom.equalToSuperview().offset(-5)
         }
+        containerView.backgroundColor = .clear
+        let blurEffect = UIBlurEffect(style: .dark)
+        let blurView = UIVisualEffectView(effect: blurEffect)
+        blurView.frame = containerView.bounds
+        blurView.alpha = 0.5
+        containerView.addSubview(blurView)
+        self.addSubview(containerView)
+        containerView.snp.makeConstraints { make in
+            make.bottom.equalToSuperview()
+            make.centerX.equalToSuperview()
+            make.height.equalTo(5)
+            make.width.equalToSuperview()
+        }
+        self.addSubview(blurView)
+        blurView.snp.makeConstraints { make in
+            make.bottom.equalToSuperview()
+            make.centerX.equalToSuperview()
+            make.height.equalTo(5)
+            make.width.equalToSuperview()
+        }
     }
-    
     private func selectPageControllerItem(at index: Int) {
         let indexPath = IndexPath(item: index, section: 0)
         PageControllerCollectionView.selectItem(at: indexPath, animated: false, scrollPosition: .left)
@@ -106,9 +126,9 @@ extension SwipeableHeaderView: UICollectionViewDataSource {
         switch collectionView{
         case MoviePosterCollectionView:
             guard let cell = MoviePosterCollectionView.dequeueReusableCell(withReuseIdentifier: MovieCollectionViewCell.identifier, for: indexPath) as? MovieCollectionViewCell else {
-                return UICollectionViewCell()
-            }
-            cell.configure(with: trendMoviesList[indexPath.row])
+                return UICollectionViewCell() }
+            cell.hideTitleLabel()
+            cell.configure(with: trendMoviesList.get(at: indexPath.row))
             return cell
         case PageControllerCollectionView:
             guard let pageCell = PageControllerCollectionView.dequeueReusableCell(withReuseIdentifier: PageControllerCollectionCell.identifier, for: indexPath) as? PageControllerCollectionCell else {
@@ -123,22 +143,22 @@ extension SwipeableHeaderView: UICollectionViewDataSource {
 
 extension SwipeableHeaderView: UICollectionViewDelegate {
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-            let layout = self.MoviePosterCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
-            let cellWidthIncludingSpacing = layout.itemSize.width + layout.minimumLineSpacing
-
-            var offset = targetContentOffset.pointee
-            let index = (offset.x + scrollView.contentInset.left) / cellWidthIncludingSpacing
-            let roundedIndex = round(index)
-
-            offset = CGPoint(x: roundedIndex * cellWidthIncludingSpacing - scrollView.contentInset.left, y: -scrollView.contentInset.top)
-            targetContentOffset.pointee = offset
-        }
+        let layout = self.MoviePosterCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let cellWidthIncludingSpacing = layout.itemSize.width + layout.minimumLineSpacing
+        
+        var offset = targetContentOffset.pointee
+        let index = (offset.x + scrollView.contentInset.left) / cellWidthIncludingSpacing
+        let roundedIndex = round(index)
+        
+        offset = CGPoint(x: roundedIndex * cellWidthIncludingSpacing - scrollView.contentInset.left, y: -scrollView.contentInset.top)
+        targetContentOffset.pointee = offset
+    }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-         if scrollView == MoviePosterCollectionView {
-             let currentIndex = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
-             currentPosterIndex = currentIndex
-             selectPageControllerItem(at: currentPosterIndex)
-         }
-     }
+        if scrollView == MoviePosterCollectionView {
+            let currentIndex = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
+            currentPosterIndex = currentIndex
+            selectPageControllerItem(at: currentPosterIndex)
+        }
+    }
 }

@@ -8,10 +8,10 @@
 import Foundation
 import Foundation
 struct MovieGenre: Codable {
-  let id: Int?
-  let name: String?
-  var isSelected: Bool? = false
+    let id: Int?
+    let name: String?
+    var isSelected: Bool? = false
 }
 struct MovieGenreList: Codable {
-  let genres: [MovieGenre]?
+    let genres: [MovieGenre]?
 }

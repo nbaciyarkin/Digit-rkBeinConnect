@@ -12,7 +12,7 @@ fileprivate let viewTag = 14531453
 
 final class Loader {
     
-    class func show(_ customView: UIView? = nil, color: UIColor = .black) {
+    class func show(_ customView: UIView? = nil, color: UIColor = Colors.black) {
         let bgView = UIView()
         let loadingIndicator = UIActivityIndicatorView()
         

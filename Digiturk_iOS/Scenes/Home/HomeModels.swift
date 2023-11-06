@@ -7,33 +7,33 @@
 
 import Foundation
 enum Home {
-  enum View {
-    struct Request {
+    enum View {
+        struct Request {
+        }
+        struct Response {
+            let genres: [MovieGenre]
+            let error: String?
+        }
+        struct ViewModel {
+            let genres: [MovieGenre]
+            let error: String?
+        }
     }
-    struct Response {
-      let genres: [MovieGenre]
-      let error: String?
-    }
-    struct ViewModel {
-      let genres: [MovieGenre]
-      let error: String?
-    }
-  }
 }
 
 enum MovieList {
-  enum View {
-    struct Request {
+    enum View {
+        struct Request {
+        }
+        struct Response {
+            let movieList: [Movie]
+            let error: String?
+        }
+        struct ViewModel {
+            let movieList: [Movie]
+            let error: String?
+        }
     }
-    struct Response {
-      let movieList: [Movie]
-      let error: String?
-    }
-    struct ViewModel {
-      let movieList: [Movie]
-      let error: String?
-    }
-  }
 }
 
 
