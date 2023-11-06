@@ -37,13 +37,12 @@ run ederek hatayı çözebilirsiniz.
   - Başlangıçta view'ın arka planı şeffaftır. TabelView scroll.Y değeri (70) ve (180 aralığında arkaplan rengi transparence özelliği 0.5 deperinde siyah olarak belirlenir. Eğer scroll.Y 180 değerinden büyük ise arkaplan rengi siyah olarak belirlenmiştir.
 
 <h2>Genre Detail</h2>
-<img src="https://user-images.githubusercontent.com/60100510/222154620-fd13c06a-86ac-4bd4-8167-2b9b0d9d9c72.png" alt="Swagger" width="200" height="400"/>     
-<img src="https://github.com/nbaciyarkin/Digit-rkBeinConnect/assets/60100510/64b1628d-a601-40ea-bab9-0dbf057cfad3.png" alt="Swagger" width="200" height="400"/>
+<img src="https://github.com/nbaciyarkin/Digit-rkBeinConnect/assets/60100510/1270c3ba-4185-446f-b4fb-bfb8ef0f6bb4" alt="Swagger" width="200" height="400"/>
 
 <h2>Custom Video Player</h2>
-<img src="https://github.com/nbaciyarkin/Digit-rkBeinConnect/assets/60100510/0faaf428-3c62-4330-9282-943eb338cc7a.png" alt="Swagger" width="200" height="400"/>
-
 <img src="https://github.com/nbaciyarkin/Digit-rkBeinConnect/assets/60100510/f5856c18-63dd-41d9-b5f2-3beb706487d2.png" alt="Swagger" width="200" height="400"/>
+
+<img src="https://github.com/nbaciyarkin/Digit-rkBeinConnect/assets/60100510/0faaf428-3c62-4330-9282-943eb338cc7a.png" alt="Swagger" width="200" height="400"/>
 
  -<h2>Package Management</h2> 
   - CocoaPods
