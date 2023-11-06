@@ -31,7 +31,7 @@ run ederek hatayı çözebilirsiniz.
 
  # BeinConnect - SCENES
 <h2>Home Screen</h2>
-<img src="https://github.com/nbaciyarkin/Digit-rkBeinConnect/assets/60100510/1bb6bf4f-2f12-4649-abca-dd0b79691418.png" alt="Swagger" width="200" height="400"/>
+<img src="https://user-images.githubusercontent.com/60100510/1bb6bf4f-2f12-4649-abca-dd0b79691418.png" alt="Swagger" width="200" height="400"/>
 <img src="https://github.com/nbaciyarkin/Digit-rkBeinConnect/assets/60100510/f4133ac2-f35e-4fdd-bc52-dff2cc29171bc.png" alt="Swagger" width="200" height="400"/>
 <img src="https://github.com/nbaciyarkin/Digit-rkBeinConnect/assets/60100510/aea14c72-d8fd-4700-bea6-79492ac30eb9.png" alt="Swagger" width="200" height="400"/>
 
