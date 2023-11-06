@@ -23,7 +23,6 @@ run ederek hatayı çözebilirsiniz.
   Uygulamayı  Ayağa kaldırın ->  Digiturk.xcworkspace 
  -
   # BeinConnect Uygulaması ekran kaydı private olarak  YouTube'a eklenmiştir.
-  # Private Youtube Video Link
 <h2>Video Link</h2>   
    -Link :  https://youtu.be/wHe3ByK8VqE
 
