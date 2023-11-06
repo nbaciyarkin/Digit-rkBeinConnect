@@ -23,6 +23,10 @@ run ederek hatayı çözebilirsiniz.
   Uygulamayı  Ayağa kaldırın ->  Digiturk.xcworkspace 
  -
 
+ # BeinConnect - SCENES
+
+<h2>Home Screen</h2>
+ <img src="https://github.com/nbaciyarkin/Digit-rkBeinConnect/assets/60100510/851e260d-8c90-434f-9696-aa389533b43c.png" alt="Swagger" width="200" height="400"/>
 
  -<h2>Package Management</h2> 
   - CocoaPods
