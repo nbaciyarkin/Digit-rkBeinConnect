@@ -3,6 +3,7 @@ DigitürkBeinConnect - iOS
 
 Proje 2 farklı şekilde size gönderilmiştir.
 
+<h1>Mail Zip </h1>   
 1- mail yoluyla gönderdilen zip dosyası.
 Eğer projeyi'yı unzip yaptıktan sonra projeyi ayağa kaldırırken 
 
@@ -16,7 +17,7 @@ pod deintegrate; pod install
 run ederek hatayı çözebilirsiniz.
 
 
-
+<h1>Github Repository</h1>   
 2- Bu repository'nin linki paylaşılmıştır.
 İlk önce Terminal -> $ Pod dosyaları için pod install  
 
@@ -44,7 +45,7 @@ run ederek hatayı çözebilirsiniz.
 
  <h2>Custom Video Player</h2>
 
- <img src="https://github.com/nbaciyarkin/Digit-rkBeinConnect/assets/60100510/a25c4073-6b5f-4258-8919-169affbb9694.png" alt="Swagger" width="200" height="400"/
+ <img src="https://github.com/nbaciyarkin/Digit-rkBeinConnect/assets/60100510/a25c4073-6b5f-4258-8919-169affbb9694.png" alt="Swagger" width="200" height="400"/>
 
  <img src="https://github.com/nbaciyarkin/Digit-rkBeinConnect/assets/60100510/7cbdcb93-a16d-4746-9d79-cf7e93502bf4.png" alt="Swagger" width="200" height="400"/>
 
