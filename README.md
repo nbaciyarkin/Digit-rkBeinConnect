@@ -26,12 +26,13 @@ run ederek hatayı çözebilirsiniz.
   # BeinConnect Uygulaması ekran kaydı private olarak  YouTube'a eklenmiştir.
 <h2>Video Link</h2>   
    -Link :  https://youtu.be/wHe3ByK8VqE
+![beinConnect_Home3]()
 
  # BeinConnect - SCENES
 <h2>Home Screen</h2>
-<img src="https://user-images.githubusercontent.com/60100510/1bb6bf4f-2f12-4649-abca-dd0b79691418.jpeg" alt="Swagger" width="200" height="400"/>
-<img src="https://github.com/nbaciyarkin/Digit-rkBeinConnect/assets/60100510/f4133ac2-f35e-4fdd-bc52-dff2cc29171bc.png" alt="Swagger" width="200" height="400"/>
-<img src="https://github.com/nbaciyarkin/Digit-rkBeinConnect/assets/60100510/aea14c72-d8fd-4700-bea6-79492ac30eb9.png" alt="Swagger" width="200" height="400"/>
+<img src="https://github.com/nbaciyarkin/Digit-rkBeinConnect/assets/60100510/0f8871a1-86f4-4c54-a170-88a1b788bdf6.png" alt="Swagger" width="200" height="400"/>
+<img src="https://github.com/nbaciyarkin/Digit-rkBeinConnect/assets/60100510/a7ca538e-59e6-4c5d-9ee3-05657c0534be.png" alt="Swagger" width="200" height="400"/>
+<img src="https://github.com/nbaciyarkin/Digit-rkBeinConnect/assets/60100510/06114d63-e19d-44db-9c9b-14e6d93d6c1b.png" alt="Swagger" width="200" height="400"/>
 
   - UITabelView aşağı doğru scroll edilirken en yukarıda ki view rengini değiştirmektedir.
   - Başlangıçta view'ın arka planı şeffaftır. TabelView scroll.Y değeri (70) ve (180 aralığında arkaplan rengi transparence özelliği 0.5 deperinde siyah olarak belirlenir. Eğer scroll.Y 180 değerinden büyük ise arkaplan rengi siyah olarak belirlenmiştir.
